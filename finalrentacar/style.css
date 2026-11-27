@@ -158,3 +158,11 @@ input, select { width: 100%; min-width: 0; }
 @media (max-width: 400px) {
   #booking .row { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Date controls: wrapper owns the dimensions, not native Safari input. */
+#booking .date-field { display: block; position: relative; width: 100%; min-width: 0; height: 46px; border: 1px solid var(--line); border-radius: 6px; background: var(--field); overflow: hidden; }
+#booking .date-field input[type="date"] { position: absolute; inset: 0; width: 100% !important; max-width: 100% !important; min-width: 0 !important; height: 100%; min-height: 0; margin: 0; padding: 0 12px; border: 0; border-radius: 0; background: transparent; font-size: 16px; }
+#booking .date-field:focus-within { border-color: var(--accent); }
+#booking .date-field:has(input.bad) { border-color: var(--err, #ff5a52); }
+#booking .date-field input::-webkit-date-and-time-value { margin: 0; padding: 0; text-align: left; }
+@media (max-width: 600px) { #booking .row { display: flex; flex-direction: column; } #booking .row > label { display: flex; flex-direction: column; width: 100%; min-width: 0; } }
