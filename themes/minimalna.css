@@ -1,0 +1,21 @@
+/* Minimalistička tema: svetla i mirna */
+:root {
+  color-scheme: light;
+  --bg: #fbfbfc; --card: #ffffff; --ink: #15161a; --muted: #6a6c78; --line: #e8e8ec;
+  --accent: #0f8b6d; --accent-dark: #0b7058; --green: #0f8b6d; --err: #c62828;
+  --chrome: #fbfbfc; --field: #ffffff; --faint: #9a9ca8; --car-glow: #f1f2f5; --on-accent: #ffffff;
+  --display: "Sora", system-ui, sans-serif;
+  --h-weight: 600; --h-style: normal; --h-case: none; --h-track: -.035em;
+  --h1-size: clamp(2.2rem, 5vw, 3.6rem); --h1-lh: 1.08; --h2-size: 1.6rem; --panel-h2: 1.2rem; --logo-size: 1.3rem;
+  --stripe: none; --indent: 0px;
+  --shadow: none; --btn-shadow: none; --hover-shadow: 0 8px 24px rgba(21,22,26,.08);
+}
+
+header { border-bottom: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); }
+.panel { border-top: 1px solid var(--line); }
+.btn, .chip { border-radius: 999px; }
+.why > div { border-left: 1px solid var(--line); }
+
+/* Razmak između vozila i pogodnosti */
+section.why { padding-top: 60px; }
