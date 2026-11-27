@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Dnd X Rent a Car – Iznajmljivanje vozila</title>
+<meta name="description" content="Dnd X Rent a Car: iznajmite auto brzo i jednostavno, bez skrivenih troškova.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="themes/sport.css" id="theme">
+</head>
+<body>
+
+<!-- Jedan SVG automobil koji koristimo na svim karticama (<use href="#car">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="car" viewBox="0 0 120 50">
+    <path d="M6 36V27l16-5 14-12h42l16 12 18 5v9z" fill="currentColor"/>
+    <path d="M38 13h38l12 9H28z" fill="#fff" opacity=".55"/>
+    <circle cx="30" cy="37" r="8" fill="#101828" stroke="#4a4f5c" stroke-width="1.5"/><circle cx="90" cy="37" r="8" fill="#101828" stroke="#4a4f5c" stroke-width="1.5"/>
+    <circle cx="30" cy="37" r="3" fill="#cbd2dc"/><circle cx="90" cy="37" r="3" fill="#cbd2dc"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="index.html" aria-label="Dnd X Rent a Car">
+      <svg width="122" height="58" viewBox="-4 -4 755 358" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M38 158.3 36.4 147 37.3 137 40.5 130.5 45.5 125.8 62.5 116.3 84.5 107 105 99.9 134 91.9 157.5 86.9 181.5 82.9 237.5 76.8 305.5 72.8 398.5 70.7 413.4 52 427.9 36 443 22.5 452.1 16 424 14.1 391 14.6 354.5 18.9 335 22.9 319 27.8 298 36.9 283 45.3 257 62.7 245 69.5 242 70.9 241.8 70.5 264 52.5 280.5 40.4 297.5 29.8 311.5 22.9 331 15.8 355 9.9 376.5 6.3 411 3.3 445.5 3 474 4.4 499 7.3 524.5 12.4 547.5 18.8 572 27.5 608 42.3 642.5 57.6 662 63.5 674.5 65.2 687 64.7 695 63.2 706.5 58.7 705.2 62.5 702.1 67 699 70.1 694.5 73.1 685.5 75.5 670.7 76.5 682.5 80.4 695.5 85.9 702.5 90.4 710.1 97 713.6 101 718.1 108 722 116.6 724.5 126 725.6 137 725.5 145.5 719.6 128.5 714.2 118.5 707.7 110.5 700.5 104.3 694 100.4 686.5 97.5 678 95.1 664.5 92.9 652.5 92 627.5 92.1 388 102.4 375.1 102.5 394.5 99.4 440.5 94.4 603.5 80.1 624.5 76.6 632.5 74.1 636.2 71.5 636.2 70 633.5 67.3 613.5 55.3 589 43.4 558 30.9 542 25.9 522 20.9 505 18.4 489.5 18 482 18.4 471.5 20.4 464 23.4 454 29.7 447 35.6 432.4 52 414.5 77.6 327.5 78.9 254.5 83.5 220 86.8 201 89.4 145 99.4 124.5 104.5 100 111.9 79 119.7 62.5 127.4 52.5 133.3 44.3 140.5 40.3 148.5ZM490 82.5 472.3 82.5 487.5 78.6 491.5 76 491.7 72.5 490 70.4 485 68.9 479 68.5 464 68.2 446 69.3 441.5 70.5 436.5 72.8 425.8 80 429.8 72.5 433.8 67 439.7 60.5 445.5 55.9 448.5 54.3 455 52.9 468 52.5 479 53.5 487.5 55.3 495 58.3 499.2 62 501.6 68.5 501.6 72.5 500.7 76 499.2 78.5 496.5 80.7ZM191.5 117.1 190.6 117 205.5 110.9 229.5 103.2 257 95.9 277.5 91.5 301.5 87.4 328 84.4 346 83.4 362.7 83.5 342.5 85.9 311 91.3 237 108.8ZM259 180.9 258.5 180.5 260 169.5 263.3 157 269.9 142.5 276.7 132.5 283.8 124.5 294.5 115.7 308.5 108.2 319.5 104.6 333.5 102.5 344 102.5 356 104.4 370 109.5 381 116.4 388.5 123.6 395.2 132.5 401.5 145 401 145.3 388.5 132.9 381 127.3 374 123.3 364 118.9 355.5 116.8 346 115.9 336.5 116.3 327 117.9 315 121.8 306.5 125.8 297 131.9 288.3 139 279.3 148.5 272.4 157.5 263.5 172ZM594 160 595.2 151.5 598.8 141 603.3 132 608.7 124 616.5 116.2 625 110.3 632.5 106.9 643.5 104.3 652.5 103.9 662.5 105.1 672.5 107.9 683 112.8 692.5 119.7 697.5 125.1 703.2 133.5 707.6 143.5 695.9 131 685 123.2 677.5 119.9 670 117.7 663 116.7 653.5 116.9 644.5 118.8 636.5 121.9 623.5 129.3 609 141.6 602.7 148.5ZM112 153.5 83.5 153.8 59.5 151.6 53 149.3 50.9 147 50 144.5 76.5 146.4 108.5 146.3 175.5 141.9 227 139.6 232 138.6 238.5 135.7 243.5 131.6 248.3 126 243.5 125.9 206 129.6 151.8 133.5 161 130.3 173 127.4 193 123.8 241 118.1 262 116.2 281.1 115.5 252.9 144 245 148.6 238.5 150.6 223.5 151.9 141.5 152.3ZM701 296.7 657.5 296.6 620.5 251.2 553.5 296.1 508.5 296.5 508.2 296 603.8 230.5 602.5 228.1 555.6 171 556 170.5 598 170.7 632 211.9 694.5 169.1 742.5 169 742.7 169.5 648.8 232 656.8 242.5 701.3 296ZM463 295.5 375 295.7 367 294.7 361.5 293.2 357 291.2 353.5 288.7 349.4 283.5 347.9 280 346.7 275 346.7 268 349.8 253.5 353.4 245.5 357.4 238.5 364.3 229.5 375 219.9 389 211.5 401 206.9 414.5 204.4 473.5 204.2 491 170.7 524.5 170.4 524.8 171ZM111 296.5 21.5 296.6 15 296.6 14.5 296 55.5 214.8 90.5 214.5 92.8 215 66.6 268 121.5 268.1 134.5 265.6 142.5 262.3 150 257.7 159 249.2 164.6 242 169.1 234.5 174.2 223.5 176.5 213.5 176.6 211 175.2 207 170 202.3 162 200.2 49.2 200 76.5 171.9 177.5 171.9 185.5 172.9 192.5 174.9 200.5 178.5 204 181 210.6 187.5 214.5 195 216.7 203.5 217.1 213.5 214.8 226.5 210.6 238.5 204.2 250 198 258.5 190.5 266.7 180.5 275.1 169.5 282.3 160.5 286.6 146 291.7 136 293.9 124 295.7ZM225.5 296.1 190 296 228.8 219.5 235.4 209 238 206.4 241 204.8 244.5 204.4 333 204.3 339.5 204.9 346 206.8 349.5 208.9 353.1 212.5 354.6 216 355.1 219.5 354.6 224.5 352.6 231 320.5 295.4 285.4 295 313.7 238.5 314.2 233.5 313.3 231.5 310 229.4 306 229 267 228.9 259.7 229.5ZM439.6 272 459.8 232.5 461.6 228.5 461 228 417 228.2 407.5 229.8 401 232.8 393.5 238.6 389.3 243.5 384.4 252.5 382.9 258.5 383.4 264 385.5 267.7 390.5 270.7 400.5 272.2ZM483 346.6 477.5 346.7 472 345.2 467.8 342 465.3 338 464.4 332.5 465.4 327.5 468.7 323 473.5 319.8 478 318.9 484 319.3 487 320.4 490.7 323 487.5 326.7 483 324.3 479.5 323.8 476.5 324.3 473 326.5 470.8 330 470.3 333 470.8 336 474 340.2 478 341.6 481.5 341.7 484.5 340.8 487.5 338.8 491 342 488 344.6ZM163.5 346.1 157 346.3 149.5 337 144.5 337.4 144 346.3 138.6 346 138.8 319.5 154 319.3 158.5 320.9 160.5 322.4 162.6 326.5 162.3 331 160.4 334 156.7 336.5ZM217 346.4 195.5 346.3 195.5 319.4 217.1 319.5 216.9 324 201.5 324.2 201 326.5 201.5 330.2 215 330.4 215.3 332.5 215 335.1 201.5 335.3 201.2 341 217 341.5ZM276 346.4 271 346.1 257 328.7 256.5 329 256.4 346 251 346.3 251 319.3 256.3 319.5 270.5 336.4 270.9 319.5 276.5 319.5 276.5 346ZM321 346.3 315.7 346 315.6 324.5 307 324.1 307 319.4 330.5 319.5 330.5 324.1 321.5 324.6ZM412 346.2 406 346.3 402.5 340.3 390.5 340.3 387 346.4 381.5 346.2 393.7 319.5 399.5 319.6ZM551.5 346.3 546 346.4 543 340.6 539 340.3 530.5 340.4 527 346.3 521.1 346 534 319.4 539.5 319.7 550.1 342ZM608.5 346.3 602 346.1 595.7 337.5 594.5 337 589.6 337.5 589.5 346 583.5 346.1 583.8 319.5 599 319.4 603 320.4 605.8 322.5 607.6 326.5 607.2 331 605.5 334 601.9 336.5 608.6 345.5ZM153.9 332 155.5 331.2 156.5 329.5 156.5 327 155.5 325.3 152 324.2 144.5 324.4 144.5 332ZM599.1 332 601 330.7 601.8 329 601.8 327 600.9 325.5 597 324.2 589.7 324.5 589.5 332ZM540.8 335 536.5 326 532.4 335 537 335.5ZM400.7 335 396.5 326 392.2 335ZM107 337.5 3.5 337.6 2.8 337 2.8 330 11 329.5 107 329.6 107.7 330 107.7 334 107.7 337ZM743 337.5 639.5 337.6 638.8 337 638.8 330 642 329.5 743 329.6 743.6 330 743.7 335 743.7 337Z"/></svg>
+    </a>
+    <nav>
+      <a href="#vozila">Vozila</a>
+      <a href="#rezervacija">Rezervacija</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-text">
+      <h1>Auto za vaš put, spremno za sat vremena.</h1>
+      <p>Od gradskih automobila do SUV-ova. Jasne cene, bez skrivenih troškova i sa podrškom kad god vam zatreba.</p>
+      <a class="btn" href="#vozila">Pogledaj vozila</a>
+    </div>
+
+    <form class="panel" id="booking" novalidate>
+      <h2 id="rezervacija">Rezervišite online</h2>
+      <label>Vozilo
+        <select id="carSelect" required></select>
+      </label>
+      <div class="row">
+        <label>Preuzimanje
+          <input type="date" id="start" required>
+        </label>
+        <label>Povratak
+          <input type="date" id="end" required>
+        </label>
+      </div>
+      <label>Ime i prezime
+        <input type="text" id="name" placeholder="Petar Petrović" required>
+      </label>
+      <label>Telefon
+        <input type="tel" id="phone" placeholder="+381 6x xxx xxxx" required>
+      </label>
+      <div class="total" aria-live="polite">
+        <span>Ukupna cena</span>
+        <strong id="total">–</strong>
+      </div>
+      <p class="msg" id="msg" role="status"></p>
+      <button class="btn" type="submit">Pošalji rezervaciju</button>
+    </form>
+  </section>
+
+  <section id="vozila" class="wrap">
+    <h2>Naša vozila</h2>
+    <div class="filters" id="filters">
+      <button class="chip active" data-cat="Svi">Svi</button>
+      <button class="chip" data-cat="Ekonomik">Ekonomik</button>
+      <button class="chip" data-cat="Porodični">Porodični</button>
+      <button class="chip" data-cat="SUV">SUV</button>
+      <button class="chip" data-cat="Premium">Premium</button>
+    </div>
+    <div class="fleet" id="fleet"></div>
+  </section>
+
+  <section class="wrap why">
+    <div><h3>Bez skrivenih troškova</h3><p>Cena koju vidite je cena koju plaćate. Osiguranje i neograničena kilometraža su uključeni.</p></div>
+    <div><h3>Podrška 24/7</h3><p>Kvar ili pitanje usred noći? Pozovite nas, uvek neko javlja.</p></div>
+    <div><h3>Fleksibilno otkazivanje</h3><p>Besplatno otkazivanje do 24 sata pre preuzimanja vozila.</p></div>
+  </section>
+</main>
+
+<footer id="kontakt">
+  <div class="wrap foot">
+    <div>
+      <strong>Dnd X Rent a Car</strong>
+      <p>Zmaj Jove Jovanovića 24a, Pančevo</p>
+      <p>Svaki dan 08:00 – 20:00</p>
+    </div>
+    <div>
+      <p><a href="tel:+381633333333">+381 6333333333</a></p>
+      <p><a href="mailto:info@dndx.com">info@dndx.com</a></p>
+    </div>
+  </div>
+  <p class="wrap demo">Demo projekat: Dnd X je firma napravljena za rent a car servis.</p>
+</footer>
+
+<script src="script.js?v=8"></script>
+</body>
+</html>

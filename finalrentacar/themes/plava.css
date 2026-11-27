@@ -1,0 +1,20 @@
+/* Korporativna tema: plava i bela */
+:root {
+  color-scheme: light;
+  --bg: #f3f6fb; --card: #ffffff; --ink: #0f2540; --muted: #5a6b82; --line: #dbe3ee;
+  --accent: #1769e0; --accent-dark: #0f55bd; --green: #12805c; --err: #c62828;
+  --chrome: #ffffff; --field: #ffffff; --faint: #8a97ab; --car-glow: #e6edf8; --on-accent: #ffffff;
+  --display: "Sora", system-ui, sans-serif;
+  --h-weight: 800; --h-style: normal; --h-case: none; --h-track: -.03em;
+  --h1-size: clamp(2.1rem, 4.8vw, 3.4rem); --h1-lh: 1.1; --h2-size: 1.8rem; --panel-h2: 1.25rem; --logo-size: 1.4rem;
+  --stripe: none; --indent: 0px;
+  --shadow: 0 12px 40px rgba(15,37,64,.12); --btn-shadow: 0 8px 20px rgba(23,105,224,.3); --hover-shadow: 0 12px 28px rgba(15,37,64,.14);
+}
+
+header { border-bottom: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); }
+.panel { border-top: 1px solid var(--line); }
+.why > div { border-left-color: var(--accent); }
+
+/* Razmak između vozila i pogodnosti */
+section.why { padding-top: 60px; }

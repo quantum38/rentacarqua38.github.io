@@ -1,0 +1,18 @@
+/* Premium tema: tamnoplava i zlatna */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+:root {
+  color-scheme: dark;
+  --bg: #0a1020; --card: #121a30; --ink: #eef0f6; --muted: #9aa3ba; --line: #232d4a;
+  --accent: #c9a24b; --accent-dark: #e2bd68; --green: #3ddc97; --err: #ff6b63;
+  --chrome: #070b16; --field: #0c1326; --faint: #667191; --car-glow: #1b2542; --on-accent: #0a1020;
+  --display: "Playfair Display", Georgia, serif;
+  --h-weight: 700; --h-style: normal; --h-case: none; --h-track: 0;
+  --h1-size: clamp(2.2rem, 5vw, 3.6rem); --h1-lh: 1.1; --h2-size: 2rem; --panel-h2: 1.4rem; --logo-size: 1.6rem;
+  --stripe: none; --indent: 0px;
+  --btn-shadow: 0 8px 22px rgba(201,162,75,.3); --hover-shadow: 0 14px 30px rgba(201,162,75,.15);
+}
+header, footer { border-color: var(--accent); border-width: 1px; }
+header { border-bottom-style: solid; } footer { border-top-style: solid; }
+
+/* Razmak između vozila i pogodnosti */
+section.why { padding-top: 60px; }
